@@ -6,7 +6,6 @@
     --primary-color: #ffc632;
 }
 
-
 body{
     background-color: var(--background);
     box-sizing: border-box;
@@ -16,21 +15,16 @@ body{
     color: var(--text-base);
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    overflow-y: hidden;
-}
+/*     overflow-y: hidden;
+ */}
 
+/* FORM */
 section{
     display: flex;
     flex-direction: column;
 
     header{
-        display: flex;
-        color: var(--text-title);
-        margin: 40px;
-
-        h1{
-            margin: 0 5px;
-        }
+        margin: 30px;
     }
 
     form{
@@ -38,7 +32,8 @@ section{
         flex-direction: column;
         align-items: center;
         background-color: var(--form-background);
-        margin: 60px;
+        margin: 40px;
+
 
         fieldset{          
             border: none;
@@ -63,20 +58,26 @@ section{
                     background-color: transparent;
                     color: var(--text-base);
                     padding-left: 35px;
-
                 }
                 
-
-                input:focus{
+                input:hover{
                     outline: none;
                     border: 2px solid var(--primary-color);
-
                 }
                 
                 div{
                     position: relative;
 
-                    svg{
+                    .svg{
+                        display: block;
+                        position: absolute;
+                        left: 10px;
+                        bottom: 21px;
+                        z-index: 100;
+                    }
+
+                    .show{
+                        display: none;
                         position: absolute;
                         left: 10px;
                         bottom: 21px;
@@ -84,13 +85,14 @@ section{
                     }
 
                     svg:nth-child(3){
-                        left: 230px;
+                        position: absolute;
+                        right: 5px;
                         bottom: 21px;
                     }
                 }
 
                 button{
-                    width: 104%;
+                    width: 100%;
                     background-color: var(--primary-color);
                     border-radius: 5px;
                     height: 30px;
@@ -107,7 +109,7 @@ section{
             }
 
             div:nth-child(4){
-                
+
                 div{
                     display: flex;
                     align-items: center;
@@ -123,11 +125,18 @@ section{
             p:nth-child(6){
                 color: var(--primary-color);
                 text-align: center;
-                
             }
         }
     }
 } 
+
+/* IMG */
+section:nth-child(2){
+    background-image: url(../images/side-image.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
 
 @media screen and (max-width: 430px){
     
@@ -150,8 +159,10 @@ section{
 
                     div{
                         svg:nth-child(3){
-                            left: 350px;
-                        }
+                            position: absolute;
+                            right: 20px;
+                            bottom: 21px;
+                        }                    
                     }
 
                     button{
@@ -162,7 +173,7 @@ section{
         }
     }
 
-    img:nth-child(2){
+    section:nth-child(2){
         display: none;
     }
 }

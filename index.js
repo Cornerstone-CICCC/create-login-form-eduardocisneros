@@ -11,9 +11,6 @@ const eyes = document.getElementById("eyes");
 
 /* LOCK COLOR */
 
-password.addEventListener("mouseover", (e)=>{
-
-})
 
 /* SHOW PASSWORD */
 eyes.addEventListener("click", (e)=>{
